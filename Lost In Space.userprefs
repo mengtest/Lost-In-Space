@@ -1,0 +1,18 @@
+﻿<Properties>
+  <MonoDevelop.Ide.Workspace ActiveConfiguration="Debug" PreferredExecutionTarget="MonoDevelop.Default" />
+  <MonoDevelop.Ide.Workbench ActiveDocument="Assets/Scripts/LevelSettings.cs">
+    <Files>
+      <File FileName="Assets/Scripts/RotateScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/DeathBoxScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ScreenshotScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/LevelSettings.cs" Line="62" Column="5" />
+      <File FileName="Assets/Scripts/Player Scripts/PlayerCollisionScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ShieldScript.cs" Line="1" Column="1" />
+      <File FileName="Assets/Scripts/ButtonScripts/MainMenuButtons.cs" Line="24" Column="42" />
+    </Files>
+  </MonoDevelop.Ide.Workbench>
+  <MonoDevelop.Ide.DebuggingService.Breakpoints>
+    <BreakpointStore />
+  </MonoDevelop.Ide.DebuggingService.Breakpoints>
+  <MonoDevelop.Ide.DebuggingService.PinnedWatches />
+</Properties>
