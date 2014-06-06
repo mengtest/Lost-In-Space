@@ -9,6 +9,7 @@ public class ShieldScript : MonoBehaviour {
 	int shieldTimer;
 	GameObject shieldIndicator;
 	GameObject levelSettings;
+	GameObject soundManager;
 	// Use this for initialization
 	void Start () {
 		shieldEnabled = false;
@@ -17,6 +18,7 @@ public class ShieldScript : MonoBehaviour {
 		shieldTimer = shieldTimerMax;
 		shieldIndicator = GameObject.Find("ActiveShield");
 		levelSettings = GameObject.Find("Level Settings");
+		soundManager = GameObject.Find ("SoundManager");
 	}
 	
 	// Update is called once per frame
@@ -53,6 +55,7 @@ public class ShieldScript : MonoBehaviour {
 			{
 				Destroy(col.gameObject);
 				levelSettings.SendMessage("AddScore",50);
+				soundManager.SendMessage("PlaySound", "Explosion");
 			}
 		}
 	}

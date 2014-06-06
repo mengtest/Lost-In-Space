@@ -4,9 +4,11 @@ using System.Collections;
 public class PlayerCollisionScript : MonoBehaviour {
 	bool invisibilePowerup = false;
 	GameObject levelSettings;
+	GameObject soundManager;
 	// Use this for initialization
 	void Start () {
 		levelSettings = GameObject.Find("Level Settings");
+		soundManager = GameObject.Find ("SoundManager");
 	}
 	
 	// Update is called once per frame
@@ -17,6 +19,7 @@ public class PlayerCollisionScript : MonoBehaviour {
 	void OnCollisionEnter2D (Collision2D col){
 		if (col.gameObject.tag == "Asteroid")
 		{
+			soundManager.SendMessage("PlaySound", "Explosion");
 			if (invisibilePowerup == false)
 			{
 				gameObject.SendMessage("DestroyPlayer", SendMessageOptions.DontRequireReceiver);
@@ -25,6 +28,7 @@ public class PlayerCollisionScript : MonoBehaviour {
 			{
 				col.gameObject.SendMessage("DestroyAsteroid");
 			}
+
 		}
 	}
 
@@ -35,6 +39,7 @@ public class PlayerCollisionScript : MonoBehaviour {
 			Debug.Log("Score Coin");
 			Destroy(col.gameObject);
 			levelSettings.SendMessage("AddScore", 100);
+
 		}
 		if (col.gameObject.tag == "Star")
 		{
@@ -42,12 +47,14 @@ public class PlayerCollisionScript : MonoBehaviour {
 			GameObject shield = GameObject.Find("Shield");
 			shield.SendMessage("EnableShield");
 			Destroy(col.gameObject);
+			soundManager.SendMessage("PlaySound", "Powerup");
 		}
 		if (col.gameObject.tag == "Double")
 		{
 			Debug.Log ("Score Doubled");
 			levelSettings.SendMessage("DoubleScore");
 			Destroy(col.gameObject);
+			soundManager.SendMessage("PlaySound", "Powerup");
 		}
 
 	}
