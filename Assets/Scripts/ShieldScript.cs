@@ -8,6 +8,7 @@ public class ShieldScript : MonoBehaviour {
 	public int shieldTimerMax;
 	int shieldTimer;
 	GameObject shieldIndicator;
+	GameObject levelSettings;
 	// Use this for initialization
 	void Start () {
 		shieldEnabled = false;
@@ -15,6 +16,7 @@ public class ShieldScript : MonoBehaviour {
 		circle = GetComponent<CircleCollider2D>();
 		shieldTimer = shieldTimerMax;
 		shieldIndicator = GameObject.Find("ActiveShield");
+		levelSettings = GameObject.Find("Level Settings");
 	}
 	
 	// Update is called once per frame
@@ -50,6 +52,7 @@ public class ShieldScript : MonoBehaviour {
 			if (col.gameObject.tag == "Asteroid")
 			{
 				Destroy(col.gameObject);
+				levelSettings.SendMessage("AddScore",50);
 			}
 		}
 	}
