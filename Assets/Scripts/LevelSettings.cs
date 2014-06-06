@@ -15,6 +15,7 @@ public class LevelSettings : MonoBehaviour {
 	public GameObject gameOverScreen;
 	float newTimeScale;
 	bool paused; 
+	float levelLoadTime;
 
 	// Use this for initialization
 	void Start () {
@@ -23,6 +24,7 @@ public class LevelSettings : MonoBehaviour {
 		levelScore = 0;
 		//Debug.Log ("Time Scale at Launch: " + Time.timeScale);
 		newTimeScale = 1f;
+		levelLoadTime = 0f;
 	}
 	
 	// Update is called once per frame
@@ -41,6 +43,7 @@ public class LevelSettings : MonoBehaviour {
 		{
 			doubleScoreIndicator.SendMessage("Deactivate");
 		}
+		levelLoadTime = levelLoadTime + .25f;
 	}
 
 	void FixedUpdate () {
@@ -49,7 +52,7 @@ public class LevelSettings : MonoBehaviour {
 		//Debug.Log ("Time Scale: " + Time.timeScale);
 		if (Time.timeScale < timeScaleLimit)
 		{
-			if (Time.timeSinceLevelLoad % timeIncreaseInterval == 0)
+			if (levelLoadTime % timeIncreaseInterval == 0)
 			{
 				if (paused == false)
 				{
@@ -61,7 +64,9 @@ public class LevelSettings : MonoBehaviour {
 				}
 			}
 		}
-		Debug.Log (Time.timeScale);
+		Debug.Log ("TimeScale: " + Time.timeScale);
+		//Debug.Log ("LoadTime: " + levelLoadTime);
+
 	}
 
 	public void GameOver()
@@ -89,6 +94,7 @@ public class LevelSettings : MonoBehaviour {
 	public void NewGame(){
 		Application.LoadLevel("FloatingGame");
 		gameOver = false;
+		Time.timeScale = 1f;
 	}
 
 	public void DoubleScore()
