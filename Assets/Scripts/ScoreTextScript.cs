@@ -12,6 +12,6 @@ public class ScoreTextScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		text.text = "SCORE: " + levelSettings.GetComponent<LevelSettings>().levelScore.ToString();
+		text.text = "" + levelSettings.GetComponent<LevelSettings>().levelScore.ToString();
 	}
 }

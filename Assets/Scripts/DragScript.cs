@@ -7,9 +7,11 @@ public class DragScript : MonoBehaviour {
 	public GameObject camera;
 	SpriteRenderer sprite;
 	GameObject mainCam;
+	GameObject levelSettings;
 	// Use this for initialization
 	void Start () {
 		sprite = GetComponent<SpriteRenderer>();
+		levelSettings = GameObject.Find("Level Settings");
 	}
 	
 	// Update is called once per frame
@@ -20,8 +22,11 @@ public class DragScript : MonoBehaviour {
 
 	void OnMouseDrag()
 	{
-		Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
-		gameObject.transform.position = new Vector2(ray.origin.x, gameObject.transform.position.y);
+		if (levelSettings.GetComponent<LevelSettings>().paused == false)
+		{
+			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
+			gameObject.transform.position = new Vector2(ray.origin.x, gameObject.transform.position.y);
+		}
 		//mainCam.SendMessage("StopDrag");
 	}
 
@@ -37,7 +42,7 @@ public class DragScript : MonoBehaviour {
 		else if (Input.GetMouseButtonDown(0) && firstClick == true)
 		{
 			//Debug.Log ("DOUBLE CLICKIN");
-			gameObject.SendMessage("Shoot");
+			//gameObject.SendMessage("Shoot");
 			firstClick = false;
 		}
 		//mainCam.SendMessage("StopDrag");

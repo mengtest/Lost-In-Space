@@ -13,7 +13,7 @@ public class GamePadScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		if (Input.GetAxis("Horizontal") != 0)
+		if (Input.GetAxis("Horizontal") != 0 && levelSettings.GetComponent<LevelSettings>().paused == false)
 		{
 			gameObject.transform.position = new Vector3(gameObject.transform.position.x + Input.GetAxis ("Horizontal") * speedModifier, gameObject.transform.position.y);
 		}

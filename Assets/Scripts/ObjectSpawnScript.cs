@@ -6,6 +6,8 @@ public class ObjectSpawnScript : MonoBehaviour {
 	public float spawnTimer;
 	public float spawnHeight = 7f;
 	float timer;
+	public bool optionalStarSpawning;
+	//public float optionalStarRange;
 	// Use this for initialization
 	void Start () {
 		timer = 0f;
@@ -18,8 +20,12 @@ public class ObjectSpawnScript : MonoBehaviour {
 		timer = timer + Time.deltaTime;
 
 		if (timer >= spawnTimer)
-		{
+		{	if (optionalStarSpawning == false) {
 			Spawn ();
+			}
+			else if (optionalStarSpawning == true) {
+				SpawnStars();
+			}
 			timer = 0;
 		}
 
@@ -29,6 +35,13 @@ public class ObjectSpawnScript : MonoBehaviour {
 		int objectNumber = Random.Range (0, objects.Length);
 		GameObject spawnedObject = (GameObject)Instantiate(objects[objectNumber], new Vector3(Random.Range(-2.5f,2.5f),spawnHeight), new Quaternion(0f,0f,0f,0f));
 		
+
+	}
+
+	void SpawnStars() { // This is a different script because of laziness. 
+		int objectNumber = Random.Range (0, objects.Length);
+		GameObject spawnedObject = (GameObject)Instantiate(objects[objectNumber], new Vector3(Random.Range(gameObject.transform.position.x,gameObject.transform.position.x + 3f),spawnHeight), new Quaternion(0f,0f,0f,0f));
+
 
 	}
 }

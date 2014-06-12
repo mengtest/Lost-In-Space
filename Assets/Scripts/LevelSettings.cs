@@ -14,7 +14,7 @@ public class LevelSettings : MonoBehaviour {
 	public GameObject pauseMenu;
 	public GameObject gameOverScreen;
 	float newTimeScale;
-	bool paused; 
+	public bool paused; 
 	float levelLoadTime;
 
 	// Use this for initialization
@@ -44,6 +44,8 @@ public class LevelSettings : MonoBehaviour {
 			doubleScoreIndicator.SendMessage("Deactivate");
 		}
 		levelLoadTime = levelLoadTime + .25f;
+
+
 	}
 
 	void FixedUpdate () {
