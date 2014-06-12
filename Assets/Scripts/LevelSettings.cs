@@ -64,7 +64,7 @@ public class LevelSettings : MonoBehaviour {
 				}
 			}
 		}
-		Debug.Log ("TimeScale: " + Time.timeScale);
+		//Debug.Log ("TimeScale: " + Time.timeScale);
 		//Debug.Log ("LoadTime: " + levelLoadTime);
 
 	}
