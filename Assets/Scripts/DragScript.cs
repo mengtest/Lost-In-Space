@@ -16,7 +16,7 @@ public class DragScript : MonoBehaviour {
 	void Update () {
 		mainCam = GameObject.FindGameObjectWithTag("MainCamera");
 		TimeClick();
-
+		
 	}
 
 	void OnMouseDrag()
