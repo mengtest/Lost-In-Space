@@ -287,6 +287,8 @@ Transform:
   m_Children:
   - {fileID: 1742964538}
   - {fileID: 196453006}
+  - {fileID: 1281654459}
+  - {fileID: 941130592}
   m_Father: {fileID: 0}
   m_RootOrder: 6
 --- !u!114 &78172433
@@ -723,6 +725,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: 0b99b42be54724412b100428c355ede7, type: 2}
   spawnTimer: 4.5
   spawnHeight: 15
+  optionalStarSpawning: 0
 --- !u!4 &196453006
 Transform:
   m_ObjectHideFlags: 0
@@ -2398,6 +2401,52 @@ GUIText:
     rgba: 4294967295
   m_PixelCorrect: 1
   m_RichText: 1
+--- !u!1 &941130591
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 941130592}
+  - 114: {fileID: 941130593}
+  m_Layer: 0
+  m_Name: Star Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &941130592
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 941130591}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -7.71671581, y: 3.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 78172432}
+  m_RootOrder: 3
+--- !u!114 &941130593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 941130591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c1fd62d24e74aa3a40469281762cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 100000, guid: 0b99b42be54724412b100428c355ede7, type: 2}
+  - {fileID: 100000, guid: 0b99b42be54724412b100428c355ede7, type: 2}
+  - {fileID: 100000, guid: 0b99b42be54724412b100428c355ede7, type: 2}
+  spawnTimer: 4.5
+  spawnHeight: 15
+  optionalStarSpawning: 1
 --- !u!1 &956493167
 GameObject:
   m_ObjectHideFlags: 0
@@ -2530,6 +2579,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: 3c6937243278f4e39a48726612ea91f4, type: 2}
   spawnTimer: 2
   spawnHeight: 7
+  optionalStarSpawning: 0
 --- !u!4 &964436030
 Transform:
   m_ObjectHideFlags: 0
@@ -2865,6 +2915,52 @@ GUIText:
     rgba: 4294967295
   m_PixelCorrect: 1
   m_RichText: 1
+--- !u!1 &1281654458
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 4
+  m_Component:
+  - 4: {fileID: 1281654459}
+  - 114: {fileID: 1281654460}
+  m_Layer: 0
+  m_Name: Star Spawner
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &1281654459
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1281654458}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 6.55023479, y: 3.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 78172432}
+  m_RootOrder: 2
+--- !u!114 &1281654460
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1281654458}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d6c1fd62d24e74aa3a40469281762cea, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  objects:
+  - {fileID: 100000, guid: 0b99b42be54724412b100428c355ede7, type: 2}
+  - {fileID: 100000, guid: 0b99b42be54724412b100428c355ede7, type: 2}
+  - {fileID: 100000, guid: 0b99b42be54724412b100428c355ede7, type: 2}
+  spawnTimer: 4.5
+  spawnHeight: 15
+  optionalStarSpawning: 1
 --- !u!1 &1321220171
 GameObject:
   m_ObjectHideFlags: 0
@@ -4650,7 +4746,7 @@ Transform:
   m_GameObject: {fileID: 1742964537}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
   m_LocalPosition: {x: -.00442034006, y: 0, z: 1}
-  m_LocalScale: {x: 10, y: 5, z: 5}
+  m_LocalScale: {x: 10, y: 10, z: 5}
   m_Children: []
   m_Father: {fileID: 78172432}
   m_RootOrder: 0
