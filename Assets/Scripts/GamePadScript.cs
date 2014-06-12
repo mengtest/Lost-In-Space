@@ -29,6 +29,6 @@ public class GamePadScript : MonoBehaviour {
 			pauseDown = false;
 		}
 		//Debug.Log ("Pause Axis: " + Input.GetAxis ("Pause"));
-		Debug.Log (pauseDown);
+		//Debug.Log (pauseDown);
 	}
 }

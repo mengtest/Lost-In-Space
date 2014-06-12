@@ -5,10 +5,12 @@ public class PlayerCollisionScript : MonoBehaviour {
 	bool invisibilePowerup = false;
 	GameObject levelSettings;
 	GameObject soundManager;
+	GameObject shield;
 	// Use this for initialization
 	void Start () {
 		levelSettings = GameObject.Find("Level Settings");
 		soundManager = GameObject.Find ("SoundManager");
+		shield = GameObject.Find("Shield");
 	}
 	
 	// Update is called once per frame
@@ -20,11 +22,11 @@ public class PlayerCollisionScript : MonoBehaviour {
 		if (col.gameObject.tag == "Asteroid")
 		{
 			soundManager.SendMessage("PlaySound", "Explosion");
-			if (invisibilePowerup == false)
+			if (shield.GetComponent<ShieldScript>().shieldEnabled == false)
 			{
 				gameObject.SendMessage("DestroyPlayer", SendMessageOptions.DontRequireReceiver);
 			}
-			else if (invisibilePowerup == true)
+			else if (shield.GetComponent<ShieldScript>().shieldEnabled == true)
 			{
 				col.gameObject.SendMessage("DestroyAsteroid");
 			}
@@ -39,12 +41,12 @@ public class PlayerCollisionScript : MonoBehaviour {
 			Debug.Log("Score Coin");
 			Destroy(col.gameObject);
 			levelSettings.SendMessage("AddScore", 100);
-
+			levelSettings.SendMessage("AddCoins", 1);
 		}
 		if (col.gameObject.tag == "Star")
 		{
 			Debug.Log("Shield Power Up Enabled");
-			GameObject shield = GameObject.Find("Shield");
+
 			shield.SendMessage("EnableShield");
 			Destroy(col.gameObject);
 			soundManager.SendMessage("PlaySound", "Powerup");

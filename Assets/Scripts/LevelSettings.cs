@@ -108,6 +108,10 @@ public class LevelSettings : MonoBehaviour {
 		levelScore = levelScore + score * scoreMultiplier;
 		PlayerPrefs.SetInt("CurrentLevelScore", levelScore);
 	}
+	void AddCoins(int coins)
+	{
+		PlayerPrefs.SetInt("CoinsCollected", PlayerPrefs.GetInt("CoinsCollected") + (coins * scoreMultiplier));
+	}
 
 	void MultiplierFlicker()
 	{
