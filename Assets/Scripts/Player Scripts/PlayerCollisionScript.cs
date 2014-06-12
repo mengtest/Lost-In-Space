@@ -21,7 +21,7 @@ public class PlayerCollisionScript : MonoBehaviour {
 	void OnCollisionEnter2D (Collision2D col){
 		if (col.gameObject.tag == "Asteroid")
 		{
-			soundManager.SendMessage("PlaySound", "Explosion");
+
 			if (shield.GetComponent<ShieldScript>().shieldEnabled == false)
 			{
 				gameObject.SendMessage("DestroyPlayer", SendMessageOptions.DontRequireReceiver);
@@ -30,7 +30,7 @@ public class PlayerCollisionScript : MonoBehaviour {
 			{
 				col.gameObject.SendMessage("DestroyAsteroid");
 			}
-
+			soundManager.SendMessage("PlaySound", "Explosion");
 		}
 	}
 

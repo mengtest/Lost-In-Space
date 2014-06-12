@@ -124,7 +124,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3486799721
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: 6d3c6baec299d46f6bd22b430b6fb360, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 4e4bfbad031024d6abac7119549d5df1, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &26514946
 MonoBehaviour:
@@ -167,7 +167,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &62755169
 Transform:
   m_ObjectHideFlags: 0
@@ -2965,7 +2965,7 @@ SpriteRenderer:
   m_ScaleInLightmap: 1
   m_SortingLayerID: 3486799721
   m_SortingOrder: 1
-  m_Sprite: {fileID: 21300000, guid: f5b008075660442b382444dbf4890918, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 47ec9b2d472a143959cf4c33b46b6459, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
 --- !u!114 &1476508007
 MonoBehaviour:
@@ -3879,7 +3879,7 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOver: 0
   levelScore: 0
-  timeScaleLimit: 8
+  timeScaleLimit: 12
   timeIncreaseInterval: 100
   timeScaleIncreaseAmount: .25
   pauseMenu: {fileID: 586106621}
@@ -3930,7 +3930,7 @@ SpriteRenderer:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1695937708}
-  m_Enabled: 1
+  m_Enabled: 0
   m_CastShadows: 0
   m_ReceiveShadows: 0
   m_LightmapIndex: 255
