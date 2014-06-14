@@ -42,6 +42,7 @@ public class PlayerCollisionScript : MonoBehaviour {
 			Destroy(col.gameObject);
 			levelSettings.SendMessage("AddScore", 100);
 			levelSettings.SendMessage("AddCoins", 1);
+			soundManager.SendMessage("PlaySound", "Coin");
 		}
 		if (col.gameObject.tag == "Star")
 		{

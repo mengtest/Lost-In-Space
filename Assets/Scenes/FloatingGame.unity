@@ -2245,7 +2245,7 @@ GameObject:
   - 61: {fileID: 672059202}
   - 114: {fileID: 672059201}
   m_Layer: 0
-  m_Name: PlayAgain
+  m_Name: ResumeGame
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -4728,7 +4728,7 @@ GUIText:
   m_GameObject: {fileID: 1922265999}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: play again
+  m_Text: resume
   m_Anchor: 1
   m_Alignment: 1
   m_PixelOffset: {x: 0, y: -7}
