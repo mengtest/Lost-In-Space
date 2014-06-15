@@ -1028,6 +1028,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 293723145}
+  - 114: {fileID: 293723146}
   m_Layer: 0
   m_Name: Cluster
   m_TagString: Untagged
@@ -1059,6 +1060,17 @@ Transform:
   - {fileID: 564115429}
   m_Father: {fileID: 0}
   m_RootOrder: 1
+--- !u!114 &293723146
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 293723144}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3843adcf780604a8ead32294eb7db2d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &305918059
 GameObject:
   m_ObjectHideFlags: 0
@@ -2725,6 +2737,7 @@ GameObject:
   serializedVersion: 4
   m_Component:
   - 4: {fileID: 1031963079}
+  - 114: {fileID: 1031963080}
   m_Layer: 0
   m_Name: Cluster
   m_TagString: Untagged
@@ -2756,6 +2769,17 @@ Transform:
   - {fileID: 1734400546}
   m_Father: {fileID: 0}
   m_RootOrder: 0
+--- !u!114 &1031963080
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1031963078}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3843adcf780604a8ead32294eb7db2d4, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1053075450
 GameObject:
   m_ObjectHideFlags: 0
@@ -4179,7 +4203,12 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    - target: {fileID: 400000, guid: 0b99b42be54724412b100428c355ede7, type: 2}
+      propertyPath: m_RootOrder
+      value: 1
+      objectReference: {fileID: 0}
+    m_RemovedComponents:
+    - {fileID: 11400024, guid: 0b99b42be54724412b100428c355ede7, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0b99b42be54724412b100428c355ede7, type: 2}
   m_RootGameObject: {fileID: 293723144}
   m_IsPrefabParent: 0
@@ -4444,9 +4473,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOver: 0
   levelScore: 0
-  timeScaleLimit: 12
-  timeIncreaseInterval: 100
-  timeScaleIncreaseAmount: .25
+  timeScaleLimit: 8
+  timeIncreaseInterval: 150
+  timeScaleIncreaseAmount: .125
   pauseMenu: {fileID: 586106621}
   gameOverScreen: {fileID: 1778166189}
   paused: 0
@@ -4739,7 +4768,8 @@ Prefab:
       propertyPath: m_LocalRotation.w
       value: 1
       objectReference: {fileID: 0}
-    m_RemovedComponents: []
+    m_RemovedComponents:
+    - {fileID: 11400024, guid: 0b99b42be54724412b100428c355ede7, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 0b99b42be54724412b100428c355ede7, type: 2}
   m_RootGameObject: {fileID: 1031963078}
   m_IsPrefabParent: 0

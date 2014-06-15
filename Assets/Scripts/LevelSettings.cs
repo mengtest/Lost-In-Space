@@ -26,6 +26,10 @@ public class LevelSettings : MonoBehaviour {
 		newTimeScale = 1f;
 		levelLoadTime = 0f;
 	}
+
+	void Awake () {
+		Application.targetFrameRate = 30;
+	}
 	
 	// Update is called once per frame
 	void Update () {
@@ -60,7 +64,7 @@ public class LevelSettings : MonoBehaviour {
 				{
 					if (gameOver == false)
 					{
-						Time.timeScale = Time.timeScale + .25f;
+						Time.timeScale = Time.timeScale + timeScaleIncreaseAmount;
 						newTimeScale = Time.timeScale;
 					}
 				}

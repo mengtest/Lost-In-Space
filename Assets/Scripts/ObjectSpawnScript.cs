@@ -33,6 +33,14 @@ public class ObjectSpawnScript : MonoBehaviour {
 
 	void Spawn() {
 		int objectNumber = Random.Range (0, objects.Length);
+		if (objects[objectNumber].name == "Star")
+		{
+			Random.seed = System.DateTime.Now.Second + System.DateTime.Now.Hour + System.DateTime.Now.Month + System.DateTime.Now.Minute + System.DateTime.Now.Millisecond * 2;
+			if (Random.Range(0,100) < 50){
+				Debug.Log("Swapped out shield!");
+				objectNumber = Random.Range (0,objects.Length);
+			}
+		}
 		GameObject spawnedObject = (GameObject)Instantiate(objects[objectNumber], new Vector3(Random.Range(-2.5f,2.5f),spawnHeight), new Quaternion(0f,0f,0f,0f));
 		
 
