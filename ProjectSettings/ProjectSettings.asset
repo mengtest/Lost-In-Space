@@ -56,17 +56,12 @@ PlayerSettings:
   xboxSpeechDB: 0
   xboxEnableHeadOrientation: 0
   xboxEnableGuest: 0
-  wiiHio2Usage: -1
-  wiiLoadingScreenRectPlacement: 0
-  wiiLoadingScreenBackground: {r: 1, g: 1, b: 1, a: 1}
-  wiiLoadingScreenPeriod: 1000
-  wiiLoadingScreenFileName: 
-  wiiLoadingScreenRect:
-    serializedVersion: 2
-    x: 0
-    y: 0
-    width: 0
-    height: 0
+  videoMemoryForVertexBuffers: 0
+  videoMemoryForAudio: 0
+  psp2PowerMode: 0
+  psp2AcquireBGM: 1
+  enableVerbosePS3MemoryStats: 0
+  useSPUForUmbra: 0
   m_SupportedAspectRatios:
     4:3: 1
     5:4: 1
@@ -74,6 +69,8 @@ PlayerSettings:
     16:9: 1
     Others: 1
   iPhoneBundleIdentifier: com.playnimbus.drag
+  metroEnableIndependentInputSource: 0
+  metroEnableLowLatencyPresentationAPI: 0
   productGUID: 58e77a77b51a84058aa56b3cc1c2f433
   iPhoneBundleVersion: 0.0.3
   AndroidBundleVersionCode: 1
@@ -115,17 +112,6 @@ PlayerSettings:
   m_BuildTargetBatching: []
   webPlayerTemplate: APPLICATION:Default
   m_TemplateCustomTags: {}
-  wiiRegion: 1
-  wiiGameCode: RABA
-  wiiGameVersion: 
-  wiiCompanyCode: ZZ
-  wiiSupportsNunchuk: 0
-  wiiSupportsClassicController: 0
-  wiiSupportsBalanceBoard: 0
-  wiiSupportsMotionPlus: 0
-  wiiControllerCount: 1
-  wiiFloatingPointExceptions: 0
-  wiiScreenCrashDumps: 1
   XboxTitleId: 
   XboxImageXexPath: 
   XboxSpaPath: 
@@ -148,6 +134,58 @@ PlayerSettings:
   ps3TrophyCommSig: 
   ps3SaveGameSlots: 1
   ps3TrialMode: 0
+  ps4NPTrophyPackPath: 
+  ps4NPCommunicationsID: 
+  ps4NPCommsPassphrase: 
+  ps4NPCommsSig: 
+  ps4NPTitleSecret: 
+  ps4ParamSfxPath: 
+  ps4PronunciationXMLPath: 
+  ps4PronunciationSIGPath: 
+  ps4NPtitleDatPath: 
+  ps4VideoOutPixelFormat: 0
+  ps4PackagePassword: frAQBc8Wsa1xVPfvJcrgRYwTiizs2trQ
+  ps4ParentalLevel: 1
+  ps4ContentID: IV0000-NPXX51362_00-0123456789ABCDEF
+  ps4Category: 0
+  ps4MasterVersion: 01.00
+  ps4AppVersion: 01.00
+  psp2Splashimage: {fileID: 0}
+  psp2NPTrophyPackPath: 
+  psp2NPSupportGBMorGJP: 0
+  psp2NPCommsID: 
+  psp2NPCommunicationsID: 
+  psp2NPCommsPassphrase: 
+  psp2NPCommsSig: 
+  psp2ParamSfxPath: 
+  psp2ManualPath: 
+  psp2LiveAreaGatePath: 
+  psp2LiveAreaBackroundPath: 
+  psp2LiveAreaPath: 
+  psp2PatchChangeInfoPath: 
+  psp2PatchOriginalPackage: 
+  psp2PackagePassword: F69AzBlax3CF3EDNhm3soLBPh71Yexui
+  psp2DRMType: 0
+  psp2StorageType: 0
+  psp2MediaCapacity: 0
+  psp2DLCConfigPath: 
+  psp2ThumbnailPath: 
+  psp2BackgroundPath: 
+  psp2SoundPath: 
+  psp2TrophyCommId: 
+  psp2TrophyPackagePath: 
+  psp2PackagedResourcesPath: 
+  psp2SaveDataQuota: 10240
+  psp2ParentalLevel: 1
+  psp2ShortTitle: Not Set
+  psp2ContentID: IV0000-ABCD12345_00-0123456789ABCDEF
+  psp2Category: 0
+  psp2MasterVersion: 01.00
+  psp2AppVersion: 01.00
+  psp2TVBootMode: 0
+  psp2TVDisableEmu: 0
+  psp2AllowTwitterDialog: 1
+  psmSplashimage: {fileID: 0}
   flashStrippingLevel: 2
   spritePackerPolicy: 
   scriptingDefineSymbols: {}
@@ -172,6 +210,7 @@ PlayerSettings:
   metroSplashScreenBackgroundColor: {r: 0, g: 0, b: 0, a: 1}
   metroSplashScreenUseBackgroundColor: 0
   metroCapabilities: {}
+  metroUnprocessedPlugins: []
   metroCompilationOverrides: 1
   blackberryDeviceAddress: 
   blackberryDevicePassword: 
@@ -198,6 +237,66 @@ PlayerSettings:
   tizenCertificatePath: 
   tizenCertificatePassword: 
   tizenSaveLogPath: 
+  XboxOneProductId: 
+  XboxOneUpdateKey: 
+  XboxOneSandboxId: 
+  XboxOneContentId: 
+  XboxOneTitleId: 
+  XboxOneSCId: 
+  XboxOneGameOsOverridePath: 
+  XboxOnePackagingOverridePath: 
+  XboxOneAppManifestOverridePath: 
+  XboxOnePackageEncryption: 0
+  XboxOneDescription: 
+  XboxOneCapabilities:
+    ContentRestrictions: 0
+    DocumentsLibrary: 0
+    InternetClientServer: 0
+    KinectAudio: 0
+    KinectExpressions: 0
+    KinectFace: 0
+    KinectGamechat: 0
+    KinectRequired: 0
+    KinectVision: 0
+    PrivateNetworkClientServer: 0
+    deat: 0
+    dede: 0
+    enau: 0
+    enca: 0
+    engb: 0
+    enie: 0
+    ennz: 0
+    enus: 1
+    eses: 0
+    esmx: 0
+    frca: 0
+    frfr: 0
+    itit: 0
+    ptbr: 0
+    ptpt: 0
+  XboxOneSockets:
+    Unity Internal - Mono async-IO:
+      m_Name: Unity Internal - Mono async-IO
+      m_Port: 0
+      m_Protocol: 0
+      m_Usages: 0000000001000000
+      m_TemplateName: 
+      m_SessionRequirment: 0
+      m_DeviceUsages: 
+  XboxOneSplashScreen: {fileID: 0}
+  XboxOneRatings:
+    COB-AU (Australia): 0
+    CSRR (Taiwan): 0
+    DJCTQ (Brazil): 0
+    ESRP (US): 2
+    FPB (South Africa): 0
+    GRB (Japan): 0
+    MDA (Singapore): 0
+    Microsoft: 2
+    OFLC-NZ (New Zealand): 0
+    PCBP (Russia): 0
+    PEGI (Europe): 0
+    USK (Germany): 0
   firstStreamedLevelWithResources: 0
   unityRebuildLibraryVersion: 9
   unityForwardCompatibleVersion: 39
