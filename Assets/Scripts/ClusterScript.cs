@@ -10,9 +10,10 @@ public class ClusterScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+
+		//Applied to cluster prefab. Will destroy when it has zero children / zero stars. 
 		if (gameObject.transform.childCount == 0)
 		{
-			Debug.Log("Destroyed Cluster");
 			Destroy(gameObject);
 		}
 	}

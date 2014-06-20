@@ -755,6 +755,7 @@ MonoBehaviour:
   spawnTimer: 4.5
   spawnHeight: 15
   optionalStarSpawning: 0
+  objSpawned: 0
 --- !u!4 &196453006
 Transform:
   m_ObjectHideFlags: 0
@@ -2603,25 +2604,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   objects:
-  - {fileID: 100000, guid: 2082aae45ab764140a8975b08d58bb6d, type: 2}
   - {fileID: 100000, guid: 278e398df9741474798026518a77f2e0, type: 2}
-  - {fileID: 100000, guid: 4bf80568cd15d44e9a1c1f5430357ac5, type: 2}
-  - {fileID: 100000, guid: 8caf9d9c3f877484a89019d0139d972b, type: 2}
+  - {fileID: 100000, guid: 26f5b68ded46041c9a583bc197033cb1, type: 2}
   - {fileID: 100000, guid: 8caf9d9c3f877484a89019d0139d972b, type: 2}
   - {fileID: 100000, guid: 642cc2f51bd1c4c3da9aa19dafd45326, type: 2}
-  - {fileID: 100000, guid: 642cc2f51bd1c4c3da9aa19dafd45326, type: 2}
-  - {fileID: 100000, guid: 26f5b68ded46041c9a583bc197033cb1, type: 2}
-  - {fileID: 100000, guid: 26f5b68ded46041c9a583bc197033cb1, type: 2}
   - {fileID: 100000, guid: 2131e9649b23e452e8ff556f5c8c4415, type: 2}
-  - {fileID: 100000, guid: 2131e9649b23e452e8ff556f5c8c4415, type: 2}
-  - {fileID: 100000, guid: f8b1b44bccb384adb89087f640440db8, type: 2}
   - {fileID: 100000, guid: f8b1b44bccb384adb89087f640440db8, type: 2}
   - {fileID: 100000, guid: 3c6937243278f4e39a48726612ea91f4, type: 2}
-  - {fileID: 100000, guid: 4bf80568cd15d44e9a1c1f5430357ac5, type: 2}
   - {fileID: 100000, guid: 4bf80568cd15d44e9a1c1f5430357ac5, type: 2}
   spawnTimer: 2.5
   spawnHeight: 7
   optionalStarSpawning: 0
+  objSpawned: 0
 --- !u!4 &964436030
 Transform:
   m_ObjectHideFlags: 0
