@@ -4,6 +4,8 @@ using System.Collections;
 public class ObjectSpawnScript : MonoBehaviour {
 	public GameObject[] objects;
 	public float spawnTimer;
+	public float spawnTimerSwingAmount;
+	float spawnTimerSwing;
 	public float spawnHeight = 7f;
 	float timer;
 	public bool optionalStarSpawning;
@@ -21,20 +23,23 @@ public class ObjectSpawnScript : MonoBehaviour {
 		Random.seed = System.DateTime.Now.Second + System.DateTime.Now.Hour + System.DateTime.Now.Month + System.DateTime.Now.Minute + System.DateTime.Now.Millisecond;
 
 		timer = timer + Time.deltaTime;
-
-		if (timer >= spawnTimer)
-		{	if (optionalStarSpawning == false) {
-			Spawn ();
+		if (timer >= spawnTimerSwing)
+		{	
+			if (optionalStarSpawning == false) {
+				Spawn ();
+				spawnTimerSwing = Random.Range(spawnTimer - spawnTimerSwingAmount, spawnTimer + spawnTimerSwingAmount);
 			}
 			else if (optionalStarSpawning == true) {
 				SpawnStars();
 			}
+
 			timer = 0;
 		}
 
 	}
 
 	void Spawn() {
+		Debug.Log (spawnTimerSwing);
 		int objectNumber = Random.Range (0, objects.Length);
 		if (objects[objectNumber].name == "Star")
 		{

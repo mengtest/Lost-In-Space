@@ -753,6 +753,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: 0b99b42be54724412b100428c355ede7, type: 2}
   - {fileID: 100000, guid: 0b99b42be54724412b100428c355ede7, type: 2}
   spawnTimer: 4.5
+  spawnTimerSwingAmount: 0
   spawnHeight: 15
   optionalStarSpawning: 0
   objSpawned: 0
@@ -2613,6 +2614,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: 3c6937243278f4e39a48726612ea91f4, type: 2}
   - {fileID: 100000, guid: 4bf80568cd15d44e9a1c1f5430357ac5, type: 2}
   spawnTimer: 2.5
+  spawnTimerSwingAmount: .25
   spawnHeight: 7
   optionalStarSpawning: 0
   objSpawned: 0
