@@ -31,6 +31,7 @@ public class ObjectSpawnScript : MonoBehaviour {
 			}
 			else if (optionalStarSpawning == true) {
 				SpawnStars();
+				spawnTimerSwing = Random.Range(spawnTimer - spawnTimerSwingAmount, spawnTimer + spawnTimerSwingAmount);
 			}
 
 			timer = 0;

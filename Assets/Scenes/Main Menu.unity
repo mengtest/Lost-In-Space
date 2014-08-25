@@ -724,8 +724,9 @@ MonoBehaviour:
   - {fileID: 100000, guid: 0b99b42be54724412b100428c355ede7, type: 2}
   - {fileID: 100000, guid: 0b99b42be54724412b100428c355ede7, type: 2}
   spawnTimer: 4.5
+  spawnTimerSwingAmount: 1
   spawnHeight: 15
-  optionalStarSpawning: 0
+  optionalStarSpawning: 1
   objSpawned: 0
 --- !u!4 &196453006
 Transform:
@@ -2262,7 +2263,7 @@ GUIText:
   m_GameObject: {fileID: 654132064}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: videogamescoring.com
+  m_Text: AbstractionMusic.com
   m_Anchor: 1
   m_Alignment: 1
   m_PixelOffset: {x: 0, y: 0}
@@ -2621,6 +2622,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: 0b99b42be54724412b100428c355ede7, type: 2}
   - {fileID: 100000, guid: 0b99b42be54724412b100428c355ede7, type: 2}
   spawnTimer: 4.5
+  spawnTimerSwingAmount: 1
   spawnHeight: 15
   optionalStarSpawning: 1
   objSpawned: 0
@@ -2755,6 +2757,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: f8b1b44bccb384adb89087f640440db8, type: 2}
   - {fileID: 100000, guid: 3c6937243278f4e39a48726612ea91f4, type: 2}
   spawnTimer: 2
+  spawnTimerSwingAmount: .25
   spawnHeight: 7
   optionalStarSpawning: 0
   objSpawned: 0
@@ -2965,7 +2968,7 @@ GUIText:
   m_GameObject: {fileID: 1077525713}
   m_Enabled: 1
   serializedVersion: 3
-  m_Text: Jonathon Reed - Music
+  m_Text: Benjamin Burnes - Music
   m_Anchor: 1
   m_Alignment: 1
   m_PixelOffset: {x: 0, y: 0}
@@ -3150,6 +3153,7 @@ MonoBehaviour:
   - {fileID: 100000, guid: 0b99b42be54724412b100428c355ede7, type: 2}
   - {fileID: 100000, guid: 0b99b42be54724412b100428c355ede7, type: 2}
   spawnTimer: 4.5
+  spawnTimerSwingAmount: 1
   spawnHeight: 15
   optionalStarSpawning: 1
   objSpawned: 0
