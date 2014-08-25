@@ -11,11 +11,13 @@ public class ObjectSpawnScript : MonoBehaviour {
 	public bool optionalStarSpawning; //For laziness, will allow the spanwer to switch between a spawnign stars script and spawning objects
 	public int objSpawned;
 	GameObject spawnedObject;
+	bool playerShields;
 	//public float optionalStarRange; 
 	// Use this for initialization
 	void Start () {
 		timer = 0f;
 		objSpawned = 0;
+		playerShields = GameObject.Find("Player").GetComponent<ShieldScript>().shieldEnabled;
 	} 
 	
 	// Update is called once per frame
@@ -47,6 +49,16 @@ public class ObjectSpawnScript : MonoBehaviour {
 		int objectNumber = Random.Range (0, objects.Length);
 		if (objects[objectNumber].name == "Star")
 		{
+			if (playerShields == true)
+			{
+				//Set a brand new seed for this frame
+				Random.seed = System.DateTime.Now.Second + System.DateTime.Now.Hour + System.DateTime.Now.Month + System.DateTime.Now.Minute + System.DateTime.Now.Millisecond * 2;
+				
+				//Spawn a new object that isn't element 0 in the array (the shield)
+				objectNumber = Random.Range(1,objects.Length);
+				
+				//Debug.Log ("Swapped out shield")
+			}
 			if (objSpawned < 12)
 			{
 				/*
