@@ -36,7 +36,7 @@ public class ShieldScript : MonoBehaviour {
 			shieldTimer = shieldTimer - 1;
 			//Debug.Log (shieldTimer);
 			shieldIndicator.SendMessage("Activate");
-			ShieldFlicker();
+			ShieldFlicker(); //Called constantly
 		}
 
 		if (shieldEnabled == false)
