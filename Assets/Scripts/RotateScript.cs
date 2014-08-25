@@ -6,6 +6,7 @@ public class RotateScript : MonoBehaviour {
 	float direction;
 	// Use this for initialization
 	void Start () {
+		//Determines the direction the player will spin for that round. 
 		direction = Random.Range (-1, 1);
 		if (direction == 0)
 		{

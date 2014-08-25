@@ -12,7 +12,7 @@ public class AsteroidGravityScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-
+		//This is useless. 
 		if (done == false)
 		{
 			done = true;

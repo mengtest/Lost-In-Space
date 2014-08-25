@@ -13,6 +13,7 @@ public class ActivePowerUps : MonoBehaviour {
 	
 	}
 
+	//Used in the flicker scripts in a powerup's script. Will show or hide the icon on the screen. 
 	void Activate() {
 		spriteRenderer.enabled = true;
 	}

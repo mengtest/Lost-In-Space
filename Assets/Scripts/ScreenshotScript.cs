@@ -12,7 +12,13 @@ public class ScreenshotScript : MonoBehaviour {
 	void Update () {
 		if (Input.GetKeyDown(KeyCode.S))
 		{
-			Application.CaptureScreenshot("Screenshots/LostInSpace-"+ System.DateTime.Now.Month + System.DateTime.Now.Day + System.DateTime.Now.Year + "-" + System.DateTime.Now.Hour + System.DateTime.Now.Minute + System.DateTime.Now.Second + ".png");
+			Application.CaptureScreenshot("Screenshots/LostInSpace-"+ 
+			                              System.DateTime.Now.Month + 
+			                              System.DateTime.Now.Day + 
+			                              System.DateTime.Now.Year + 
+			                              "-" + System.DateTime.Now.Hour + 
+			                              System.DateTime.Now.Minute + 
+			                              System.DateTime.Now.Second + ".png");
 		}
 	}
 }

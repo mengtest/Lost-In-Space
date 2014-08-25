@@ -12,7 +12,7 @@ public class MainMenuScript : MonoBehaviour {
 	void Update () {
 		if (Application.loadedLevelName == "Main Menu")
 		{
-			Time.timeScale = 1f;
+			Time.timeScale = 1f; //When you return to the main menu, reset the timeScale due to gameplay speeding up. 
 		}
 	}
 }

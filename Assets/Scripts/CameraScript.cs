@@ -44,7 +44,7 @@ public class CameraScript : MonoBehaviour {
 			{
 				//camera.orthographicSize--;
 			}
-
+			//If zooming was enabled, this would keep it's size so you couldn't infinitely zoom in or out. 
 			if (camera.orthographicSize >= 19f)
 			{
 				camera.orthographicSize = 19f;

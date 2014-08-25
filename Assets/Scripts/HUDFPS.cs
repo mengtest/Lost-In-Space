@@ -1,4 +1,8 @@
-﻿using UnityEngine;
+﻿/* Note: This script was not written by me and was pulled off of StackOverflow 
+ * and is only used for debug purposes. To be pretty much ignored since it does not ship with the game
+ * when it finally releases */
+
+using UnityEngine;
 using System.Collections;
 
 public class HUDFPS : MonoBehaviour 

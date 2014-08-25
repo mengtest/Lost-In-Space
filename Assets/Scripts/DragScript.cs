@@ -58,7 +58,7 @@ public class DragScript : MonoBehaviour {
 		{
 			//Debug.Log ("TIMER STARTED");
 			clickTimer++;
-//			Debug.Log (clickTimer);
+			//Debug.Log (clickTimer);
 			if (clickTimer >= 20)
 			{
 				//Debug.Log ("FIRST CLICK EXPIRED");

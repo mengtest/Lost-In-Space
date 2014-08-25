@@ -68,6 +68,7 @@ public class ShieldScript : MonoBehaviour {
 
 	void ShieldFlicker()
 	{
+		//The flicker script for when the powerup is running out. 
 		if (shieldTimer <=100)
 		{
 			shieldIndicator.SendMessage("Deactivate");

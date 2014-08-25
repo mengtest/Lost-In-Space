@@ -12,7 +12,7 @@ public class DeathBoxScript : MonoBehaviour {
 	void Update () {
 	
 	}
-
+	//Entire script destroys anything that comes in collision or triggered within it.
 	void OnTriggerEnter2D(Collider2D col) {
 		Destroy(col.gameObject);
 

@@ -3,12 +3,12 @@ using System.Collections;
 
 public class ObjectSpawnScript : MonoBehaviour {
 	public GameObject[] objects;
-	public float spawnTimer;
-	public float spawnTimerSwingAmount;
-	float spawnTimerSwing;
-	public float spawnHeight = 7f;
+	public float spawnTimer; //Mostly unused now. Could strip from code eventually. TODO: Refactor it. 
+	public float spawnTimerSwingAmount; //This is the amount that the timer will swing by. + and -
+	float spawnTimerSwing; //This is the finalized swing timer that changes each time Spawn() or SpawnStars() in Called. 
+	public float spawnHeight = 7f; //The height at which objects spawn. 7f is about the right amount off screen for spawning things. 
 	float timer;
-	public bool optionalStarSpawning;
+	public bool optionalStarSpawning; //For laziness, will allow the spanwer to switch between a spawnign stars script and spawning objects
 	public int objSpawned;
 	GameObject spawnedObject;
 	//public float optionalStarRange; 
@@ -20,11 +20,14 @@ public class ObjectSpawnScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		//Always seed Random based on seconds, hours, etc for a random experience. 
 		Random.seed = System.DateTime.Now.Second + System.DateTime.Now.Hour + System.DateTime.Now.Month + System.DateTime.Now.Minute + System.DateTime.Now.Millisecond;
 
 		timer = timer + Time.deltaTime;
 		if (timer >= spawnTimerSwing)
 		{	
+			//Spawner will determine if it's supposed to be spawning a star. It will also switch up the swing for the spawn timer
+			//each time it is called, that way it it be semi-random on when objects will spawn. 
 			if (optionalStarSpawning == false) {
 				Spawn ();
 				spawnTimerSwing = Random.Range(spawnTimer - spawnTimerSwingAmount, spawnTimer + spawnTimerSwingAmount);
@@ -60,7 +63,7 @@ public class ObjectSpawnScript : MonoBehaviour {
 				//Spawn a new object that isn't element 0 in the array (the shield)
 				objectNumber = Random.Range(1,objects.Length);
 
-				Debug.Log ("Swapped out shield"); 
+				//Debug.Log ("Swapped out shield"); 
 			}
 		}
 
@@ -69,7 +72,7 @@ public class ObjectSpawnScript : MonoBehaviour {
 			//Reset the objects spawned without a shield to zero.
 			objSpawned = 0;
 
-			Debug.Log ("Shield Spawned // Reset Counter");
+			//Debug.Log ("Shield Spawned // Reset Counter");
 		}
 
 		spawnedObject = (GameObject)Instantiate(objects[objectNumber], new Vector3(Random.Range(-2.5f,2.5f),spawnHeight), new Quaternion(0f,0f,0f,0f));

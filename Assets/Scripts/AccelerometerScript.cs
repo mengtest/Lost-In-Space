@@ -12,7 +12,10 @@ public class AccelerometerScript : MonoBehaviour {
 	void Update () {
 		if (levelSettings.GetComponent<LevelSettings>().paused == false)
 		{
-			gameObject.transform.position = new Vector3(gameObject.transform.position.x + Input.acceleration.x, gameObject.transform.position.y);
+			//Handles any accelerometer movement from the device. 
+			gameObject.transform.position = new Vector3(gameObject.transform.position.x + 
+			                                            Input.acceleration.x, 
+			                                            gameObject.transform.position.y);
 		}
 	}
 }

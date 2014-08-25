@@ -7,7 +7,7 @@ public class LevelSettings : MonoBehaviour {
 	int scoreMultiplier = 1;
 	float scoreTimer = 500f;
 
-	public float timeScaleLimit = 16f; 
+	public float timeScaleLimit = 16f; //This is the default time scale limit as the game progresses. Anything less than 12 should do. 
 	public float timeIncreaseInterval = 10f; 
 	public float timeScaleIncreaseAmount = .25f; //How much to add every timeIncreaseInterval seconds. 
 	GameObject doubleScoreIndicator;
@@ -28,7 +28,7 @@ public class LevelSettings : MonoBehaviour {
 	}
 
 	void Awake () {
-		Application.targetFrameRate = 30;
+		Application.targetFrameRate = 30; //Set a target frame rate, although I have no idea if this does anything... 
 	}
 	
 	// Update is called once per frame
@@ -121,6 +121,9 @@ public class LevelSettings : MonoBehaviour {
 
 	void MultiplierFlicker()
 	{
+		//This entire script will flicker the double score power up icon at the bottom of the screen. 
+		//Since score is handeled in this script file, the flicker script for it is here too.
+		//Other power ups should be handeld in their respective script files. 
 		if (scoreTimer <=100)
 		{
 			doubleScoreIndicator.SendMessage("Deactivate");
@@ -163,17 +166,3 @@ public class LevelSettings : MonoBehaviour {
 		}
 	}
 }
-
-
-
-
-
-
-//		outlines = GameObject.FindGameObjectsWithTag ("Outline");
-//		Debug.Log("Outlines: " + outlines.Length);
-//
-//		for (int i = 0; i < outlines.Length; i++)
-//		{
-//			outlines[i].name = ("Outline" + i);
-//			outlines[i].SendMessage("SetID", i);
-//		}
