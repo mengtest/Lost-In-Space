@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 using System.Collections;
-
+//
 public class MainMenuButtons : MonoBehaviour {
 	public GameObject credits;
 	public GameObject mainMenu;
