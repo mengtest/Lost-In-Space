@@ -64,7 +64,7 @@ PlayerSettings:
     16:10: 1
     16:9: 1
     Others: 1
-  iPhoneBundleIdentifier: com.playnimbus.drag
+  iPhoneBundleIdentifier: me.mudry.lost
   metroEnableIndependentInputSource: 0
   metroEnableLowLatencyPresentationAPI: 0
   productGUID: 58e77a77b51a84058aa56b3cc1c2f433
