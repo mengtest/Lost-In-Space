@@ -17,11 +17,14 @@ public class ObjectSpawnScript : MonoBehaviour {
 	void Start () {
 		timer = 0f;
 		objSpawned = 0;
-		playerShields = GameObject.Find("Player").GetComponent<ShieldScript>().shieldEnabled;
 	} 
 	
 	// Update is called once per frame
 	void Update () {
+		//Checking for player, and then pulling the ShieldEnabled Bool from it's script for future use. 
+		if (GameObject.Find("Player") != null)
+			playerShields = GameObject.Find("Player").GetComponentInChildren<ShieldScript>().shieldEnabled;
+
 		//Always seed Random based on seconds, hours, etc for a random experience. 
 		Random.seed = System.DateTime.Now.Second + System.DateTime.Now.Hour + System.DateTime.Now.Month + System.DateTime.Now.Minute + System.DateTime.Now.Millisecond;
 
@@ -45,7 +48,7 @@ public class ObjectSpawnScript : MonoBehaviour {
 	}
 
 	void Spawn() {
-		Debug.Log (spawnTimerSwing);
+		//Debug.Log (spawnTimerSwing);
 		int objectNumber = Random.Range (0, objects.Length);
 		if (objects[objectNumber].name == "Star")
 		{

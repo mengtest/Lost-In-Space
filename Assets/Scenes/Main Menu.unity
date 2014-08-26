@@ -5391,6 +5391,7 @@ Animator:
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
   m_HasTransformHierarchy: 1
+  m_AllowConstantClipSamplingOptimization: 1
 --- !u!212 &2054119963
 SpriteRenderer:
   m_ObjectHideFlags: 0
