@@ -7,16 +7,13 @@ public class AsteroidGravityScript : MonoBehaviour {
 	float verticalSpeedSwing = 1f;
 	// Use this for initialization
 	void Start () {
-		gameObject.rigidbody2D.AddForce(new Vector2(Random.Range (-10f,10f),Random.Range(verticalSpeed - verticalSpeedSwing, verticalSpeed + verticalSpeedSwing)));
-		done = false; 
+		gameObject.rigidbody2D.AddForce(new Vector2(Random.Range (-10f,10f),
+		                                            Random.Range(verticalSpeed - verticalSpeedSwing, 
+		             								verticalSpeed + verticalSpeedSwing)));
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		//This is useless. 
-		if (done == false)
-		{
-			done = true;
-		}
+
 	}
 }

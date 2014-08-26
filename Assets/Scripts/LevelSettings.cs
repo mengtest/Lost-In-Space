@@ -33,6 +33,15 @@ public class LevelSettings : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
+		if (gameOver == true) {
+			int timer = 0;
+			timer++;
+			if (timer > 100)
+			{
+				//Ignore for now.... might come back to making it work this way. Oh well. 
+				//Time.timeScale = 0f;
+			}
+		}
 		if (scoreMultiplier > 1)
 		{
 			scoreTimer = scoreTimer - 1;
@@ -78,7 +87,6 @@ public class LevelSettings : MonoBehaviour {
 	public void GameOver()
 	{
 		gameOver = true;
-		Time.timeScale = 0f;
 		gameOverScreen.SetActive(true);
 	}
 	public void PauseGame()

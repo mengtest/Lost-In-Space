@@ -21,9 +21,9 @@ public class PlayerCollisionScript : MonoBehaviour {
 	void OnCollisionEnter2D (Collision2D col){
 		if (col.gameObject.tag == "Asteroid")
 		{
-
 			if (shield.GetComponent<ShieldScript>().shieldEnabled == false)
 			{
+				gameObject.SendMessage("TriggerExplosion");
 				gameObject.SendMessage("DestroyPlayer", SendMessageOptions.DontRequireReceiver);
 			}
 			else if (shield.GetComponent<ShieldScript>().shieldEnabled == true)
