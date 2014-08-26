@@ -4201,7 +4201,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 400000, guid: 0b99b42be54724412b100428c355ede7, type: 2}
       propertyPath: m_RootOrder
-      value: 1
+      value: 3
       objectReference: {fileID: 0}
     m_RemovedComponents:
     - {fileID: 11400024, guid: 0b99b42be54724412b100428c355ede7, type: 2}
@@ -4228,6 +4228,7 @@ GameObject:
   - 114: {fileID: 1642804231}
   - 114: {fileID: 1642804234}
   - 114: {fileID: 1642804235}
+  - 114: {fileID: 1642804236}
   m_Layer: 0
   m_Name: Player
   m_TagString: Untagged
@@ -4439,6 +4440,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   speedModifier: .125
+--- !u!114 &1642804236
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1642804223}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d0f7f8c4a79e74154983b9db433f63f5, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  explosionEffect: {fileID: 100000, guid: 14180ef1999ba4b5a9de3b5481ea59cc, type: 2}
 --- !u!1 &1659666260
 GameObject:
   m_ObjectHideFlags: 0
