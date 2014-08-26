@@ -4482,9 +4482,9 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   gameOver: 0
   levelScore: 0
-  timeScaleLimit: 8
+  timeScaleLimit: 9
   timeIncreaseInterval: 150
-  timeScaleIncreaseAmount: .125
+  timeScaleIncreaseAmount: .129999995
   pauseMenu: {fileID: 586106621}
   gameOverScreen: {fileID: 1778166189}
   paused: 0

@@ -9,7 +9,7 @@ public class LevelSettings : MonoBehaviour {
 
 	public float timeScaleLimit = 16f; //This is the default time scale limit as the game progresses. Anything less than 12 should do. 
 	public float timeIncreaseInterval = 10f; 
-	public float timeScaleIncreaseAmount = .25f; //How much to add every timeIncreaseInterval seconds. 
+	public float timeScaleIncreaseAmount = .125f; //How much to add every timeIncreaseInterval seconds. .125f is the default amount. 
 	GameObject doubleScoreIndicator;
 	public GameObject pauseMenu;
 	public GameObject gameOverScreen;
