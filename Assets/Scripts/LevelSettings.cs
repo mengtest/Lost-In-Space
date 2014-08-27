@@ -1,4 +1,5 @@
 ﻿using UnityEngine;
+using UnityEngine.Advertisements;
 using System.Collections;
 
 public class LevelSettings : MonoBehaviour {
@@ -25,6 +26,7 @@ public class LevelSettings : MonoBehaviour {
 		//Debug.Log ("Time Scale at Launch: " + Time.timeScale);
 		newTimeScale = 1f;
 		levelLoadTime = 0f;
+		Advertisement.Initialize("16030");
 	}
 
 	void Awake () {
@@ -84,6 +86,13 @@ public class LevelSettings : MonoBehaviour {
 	public void GameOver()
 	{
 		gameOver = true;
+		PlayerPrefs.SetInt("GamesPlayed", PlayerPrefs.GetInt("GamesPlayed") + 1);
+		if (PlayerPrefs.GetInt("GamesPlayed") % 3 == 0)
+		{
+			if (Advertisement.isReady()){
+				Advertisement.Show();
+			}
+		}
 		gameOverScreen.SetActive(true);
 
 		PlayerPrefs.SetInt("RoundScore", levelScore);

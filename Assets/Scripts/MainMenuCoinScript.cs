@@ -1,14 +1,15 @@
 ﻿using UnityEngine;
+using UnityEngine.UI;
 using System.Collections;
 
 public class MainMenuCoinScript : MonoBehaviour {
 	GameObject levelSettings;
-	GUIText text;
+	Text text;
 	int collectedCoins;
 	// Use this for initialization
 	void Start () {
 		levelSettings = GameObject.Find ("Level Settings");
-		text = gameObject.GetComponent<GUIText>();
+		text = gameObject.GetComponent<Text>();
 
 	}
 	
