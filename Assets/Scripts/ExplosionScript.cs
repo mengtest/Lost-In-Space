@@ -15,6 +15,8 @@ public class ExplosionScript : MonoBehaviour {
 	}
 
 	void TriggerExplosion() {
-		Instantiate(explosionEffect, new Vector3(gameObject.transform.position.x, gameObject.transform.position.y), new Quaternion(0f,0f,0f,0f));
+		Instantiate(explosionEffect, new Vector3(gameObject.transform.position.x, 
+		                                         gameObject.transform.position.y), 
+		            								new Quaternion(0f,0f,0f,0f));
 	}
 }

@@ -14,7 +14,7 @@ public class ShieldScript : MonoBehaviour {
 	void Start () {
 		shieldEnabled = false;
 		spriteRenderer = GetComponent<SpriteRenderer>();
-		circle = GetComponent<CircleCollider2D>();
+		circle = GetComponent<CircleCollider2D>(); 
 		shieldTimer = shieldTimerMax;
 		shieldIndicator = GameObject.Find("ActiveShield");
 		levelSettings = GameObject.Find("Level Settings");
@@ -32,11 +32,10 @@ public class ShieldScript : MonoBehaviour {
 		if (shieldEnabled == true)
 		{
 			spriteRenderer.enabled = true;
-			circle.enabled = true;
+			circle.enabled = true; //Enable the Circle Collider. 
 			shieldTimer = shieldTimer - 1;
-			//Debug.Log (shieldTimer);
 			shieldIndicator.SendMessage("Activate");
-			ShieldFlicker(); //Called constantly
+			ShieldFlicker(); //Called constantly to check for when it should flicker
 		}
 
 		if (shieldEnabled == false)

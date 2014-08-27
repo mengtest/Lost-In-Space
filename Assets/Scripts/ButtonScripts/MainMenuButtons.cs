@@ -69,7 +69,7 @@ public class MainMenuButtons : MonoBehaviour {
 			soundManager.SendMessage("PlaySound", "Menu");
 			Application.LoadLevel("Stats");
 		}
-		if (gameObject.name == "MainMenuButton")
+		if (gameObject.name == "MainMenuButtonStats")
 		{
 			Debug.Log ("Returning to main menu from stats");
 			soundManager.SendMessage("PlaySound", "Menu");

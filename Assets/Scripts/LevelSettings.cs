@@ -79,30 +79,41 @@ public class LevelSettings : MonoBehaviour {
 				}
 			}
 		}
-		//Debug.Log ("TimeScale: " + Time.timeScale);
-		//Debug.Log ("LoadTime: " + levelLoadTime);
-
 	}
 
 	public void GameOver()
 	{
 		gameOver = true;
 		gameOverScreen.SetActive(true);
+
+		PlayerPrefs.SetInt("RoundScore", levelScore);
+		PlayerPrefs.SetInt("TotalScore", PlayerPrefs.GetInt("TotalScore") + levelScore);
+		PlayerPrefs.SetInt("TotalCoinsCollected", PlayerPrefs.GetInt("TotalCoinsCollected") + PlayerPrefs.GetInt("Coins"));
+
+		Debug.Log ("New Round Score: " + levelScore);
+		Debug.Log ("New Total Score: " + PlayerPrefs.GetInt("TotalScore"));
+		Debug.Log ("New Total Coins: " + PlayerPrefs.GetInt("TotalCoinsCollected"));
+
+
+		//TODO: More high score stuff! 
+
+		if (PlayerPrefs.GetInt("RoundScore") > PlayerPrefs.GetInt("HighScore"))
+		{
+			PlayerPrefs.SetInt("HighScore", levelScore);
+			Debug.Log ("New High Score Set: " + levelScore);
+		}
 	}
 	public void PauseGame()
 	{
 		paused = true;
 		pauseMenu.SetActive(true);
 		Time.timeScale = 0f;
-		//Debug.Log ("Time Scale at Pause: " + Time.timeScale);
 	}
 	public void ResumeGame()
 	{
 		pauseMenu.SetActive(false);
 		paused = false;
 		Time.timeScale = newTimeScale;
-		//Debug.Log ("Time Scale: " + Time.timeScale);
-		//Debug.Log ("New Time Scale: " + newTimeScale);
 
 	}
 	public void NewGame(){
