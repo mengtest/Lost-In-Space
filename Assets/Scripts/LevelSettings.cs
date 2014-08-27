@@ -95,6 +95,7 @@ public class LevelSettings : MonoBehaviour {
 		Debug.Log ("New Total Score: " + PlayerPrefs.GetInt("TotalScore"));
 		Debug.Log ("New Total Coins: " + PlayerPrefs.GetInt("TotalCoinsCollected"));
 		Debug.Log ("New Total Asteroids: " + PlayerPrefs.GetInt("TotalAsteroidsDestroyed"));
+		Debug.Log ("New Round Distance: " + PlayerPrefs.GetInt("RoundDistance"));
 
 		//TODO: More stat tracking!
 
