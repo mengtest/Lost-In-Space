@@ -87,7 +87,7 @@ public class LevelSettings : MonoBehaviour {
 	{
 		gameOver = true;
 		PlayerPrefs.SetInt("GamesPlayed", PlayerPrefs.GetInt("GamesPlayed") + 1);
-		if (PlayerPrefs.GetInt("GamesPlayed") % 3 == 0)
+		if (PlayerPrefs.GetInt("GamesPlayed") % 4 == 0)
 		{
 			if (Advertisement.isReady()){
 				Advertisement.Show();
