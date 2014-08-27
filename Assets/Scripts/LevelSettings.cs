@@ -88,7 +88,7 @@ public class LevelSettings : MonoBehaviour {
 
 		PlayerPrefs.SetInt("RoundScore", levelScore);
 		PlayerPrefs.SetInt("TotalScore", PlayerPrefs.GetInt("TotalScore") + levelScore);
-		PlayerPrefs.SetInt("TotalCoinsCollected", PlayerPrefs.GetInt("TotalCoinsCollected") + PlayerPrefs.GetInt("Coins"));
+		PlayerPrefs.SetInt("TotalCoinsCollected", PlayerPrefs.GetInt("TotalCoinsCollected") + PlayerPrefs.GetInt("CoinsCollected"));
 		PlayerPrefs.SetInt("TotalAsteroidsDestroyed", PlayerPrefs.GetInt("TotalAsteroidsDestroyed") + PlayerPrefs.GetInt("RoundAsteroidsDestroyed"));
 
 		Debug.Log ("New Round Score: " + levelScore);
