@@ -53,6 +53,7 @@ public class ShieldScript : MonoBehaviour {
 			if (col.gameObject.tag == "Asteroid")
 			{
 				col.SendMessage("TriggerExplosion");
+				PlayerPrefs.SetInt("RoundAsteroidsDestroyed", PlayerPrefs.GetInt("RoundAsteroidsDestroyed") + 1);
 				Destroy(col.gameObject);
 				levelSettings.SendMessage("AddScore",50);
 				soundManager.SendMessage("PlaySound", "Explosion");

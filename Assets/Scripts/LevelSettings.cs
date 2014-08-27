@@ -89,19 +89,28 @@ public class LevelSettings : MonoBehaviour {
 		PlayerPrefs.SetInt("RoundScore", levelScore);
 		PlayerPrefs.SetInt("TotalScore", PlayerPrefs.GetInt("TotalScore") + levelScore);
 		PlayerPrefs.SetInt("TotalCoinsCollected", PlayerPrefs.GetInt("TotalCoinsCollected") + PlayerPrefs.GetInt("Coins"));
+		PlayerPrefs.SetInt("TotalAsteroidsDestroyed", PlayerPrefs.GetInt("TotalAsteroidsDestroyed") + PlayerPrefs.GetInt("RoundAsteroidsDestroyed"));
 
 		Debug.Log ("New Round Score: " + levelScore);
 		Debug.Log ("New Total Score: " + PlayerPrefs.GetInt("TotalScore"));
 		Debug.Log ("New Total Coins: " + PlayerPrefs.GetInt("TotalCoinsCollected"));
+		Debug.Log ("New Total Asteroids: " + PlayerPrefs.GetInt("TotalAsteroidsDestroyed"));
+
+		//TODO: More stat tracking!
 
 
-		//TODO: More high score stuff! 
-
+		//Highscore Checking
 		if (PlayerPrefs.GetInt("RoundScore") > PlayerPrefs.GetInt("HighScore"))
 		{
 			PlayerPrefs.SetInt("HighScore", levelScore);
 			Debug.Log ("New High Score Set: " + levelScore);
 		}
+		if (PlayerPrefs.GetInt("RoundDistance") > PlayerPrefs.GetInt("HighDistance"))
+		{
+			PlayerPrefs.SetInt("HighDistance", PlayerPrefs.GetInt("RoundDistance"));
+			Debug.Log ("New High Distance Set: " + PlayerPrefs.GetInt("HighDistance"));
+		}
+
 	}
 	public void PauseGame()
 	{
