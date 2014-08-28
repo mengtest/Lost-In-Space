@@ -11,7 +11,7 @@ public class SocialSharing : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		roundScore = PlayerPrefs.GetInt("RoundScore");
 	}
 
 	void OnMouseDown () {
