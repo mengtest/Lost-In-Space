@@ -26,6 +26,7 @@ public class DragScript : MonoBehaviour {
 		{
 			Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
 			gameObject.transform.position = new Vector2(ray.origin.x, gameObject.transform.position.y);
+			GA.API.Design.NewEvent("Player.Event.Drag");
 		}
 		//mainCam.SendMessage("StopDrag");
 	}

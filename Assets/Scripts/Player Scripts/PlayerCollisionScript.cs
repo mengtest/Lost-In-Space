@@ -23,11 +23,13 @@ public class PlayerCollisionScript : MonoBehaviour {
 		{
 			if (shield.GetComponent<ShieldScript>().shieldEnabled == false)
 			{
+				GA.API.Design.NewEvent("Player.Die.Asteroid");
 				gameObject.SendMessage("TriggerExplosion");
 				gameObject.SendMessage("DestroyPlayer", SendMessageOptions.DontRequireReceiver);
 			}
 			else if (shield.GetComponent<ShieldScript>().shieldEnabled == true)
 			{
+				GA.API.Design.NewEvent("Player.Destroy.Asteroid");
 				col.gameObject.SendMessage("DestroyAsteroid");
 			}
 			soundManager.SendMessage("PlaySound", "Explosion");
@@ -39,6 +41,7 @@ public class PlayerCollisionScript : MonoBehaviour {
 		if (col.gameObject.tag == "Coin")
 		{
 			Debug.Log("Score Coin");
+			GA.API.Design.NewEvent("Player.Pickup.Coin");
 			Destroy(col.gameObject);
 			levelSettings.SendMessage("AddScore", 100);
 			levelSettings.SendMessage("AddCoins", 1);
@@ -47,13 +50,14 @@ public class PlayerCollisionScript : MonoBehaviour {
 		if (col.gameObject.tag == "Star")
 		{
 			Debug.Log("Shield Power Up Enabled");
-
+			GA.API.Design.NewEvent("Player.Pickup.Shield");
 			shield.SendMessage("EnableShield");
 			Destroy(col.gameObject);
 			soundManager.SendMessage("PlaySound", "Powerup");
 		}
 		if (col.gameObject.tag == "Double")
 		{
+			GA.API.Design.NewEvent("Player.Pickup.Double");
 			Debug.Log ("Score Doubled");
 			levelSettings.SendMessage("DoubleScore");
 			Destroy(col.gameObject);

@@ -17,13 +17,11 @@ public class SocialSharing : MonoBehaviour {
 	void OnMouseDown () {
 		if (gameObject.name == "TwitterButton")
 		{
-			Debug.Log ("Twitter Share");
-			socialManager.TwitterPost("I just scored " + roundScore + " in Lost In Space on iOS! Check it out: http://bit.ly/LostInSpace #ios #mobilegames");
+			socialManager.ShareMedia("Test!");
 		}
 		if (gameObject.name == "FacebookButton")
 		{
-			Debug.Log ("Facebook Share");
-			socialManager.FacebookPost("I just scored " + roundScore + " in Lost In Space on iOS! Check it out: http://bit.ly/LostInSpace #ios #mobilegames");
+			socialManager.ShareMedia("Test!");
 		}
 	}
 }

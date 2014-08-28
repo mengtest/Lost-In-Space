@@ -14,7 +14,7 @@ public class PlayerFunctions : MonoBehaviour {
 		if (GameObject.Find("Player") != null)
 		{
 			distanceTraveled++;
-			Debug.Log ("Current Distance Traveled is: " + distanceTraveled);
+			//Debug.Log ("Current Distance Traveled is: " + distanceTraveled);
 		}
 	}
 	

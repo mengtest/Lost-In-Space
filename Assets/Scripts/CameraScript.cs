@@ -6,7 +6,6 @@ public class CameraScript : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-
 		if (Application.loadedLevelName == "MainMenu")
 		{
 			//PlayerPrefs.SetFloat("PreviousHeightRecord", 0f);

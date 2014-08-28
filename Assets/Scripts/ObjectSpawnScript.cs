@@ -91,6 +91,7 @@ public class ObjectSpawnScript : MonoBehaviour {
 		}
 
 		spawnedObject = (GameObject)Instantiate(objects[objectNumber], new Vector3(Random.Range(-2.5f,2.5f),spawnHeight), new Quaternion(0f,0f,0f,0f));
+		GA.API.Design.NewEvent("Game.Spawn." + spawnedObject.name);
 		objSpawned = objSpawned + 1;
 
 	}

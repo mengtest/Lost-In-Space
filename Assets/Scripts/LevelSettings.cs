@@ -26,7 +26,6 @@ public class LevelSettings : MonoBehaviour {
 		//Debug.Log ("Time Scale at Launch: " + Time.timeScale);
 		newTimeScale = 1f;
 		levelLoadTime = 0f;
-		Advertisement.Initialize("16030");
 	}
 
 	void Awake () {
@@ -86,19 +85,31 @@ public class LevelSettings : MonoBehaviour {
 	public void GameOver()
 	{
 		gameOver = true;
+		GA.API.Design.NewEvent("Game.End");
 		PlayerPrefs.SetInt("GamesPlayed", PlayerPrefs.GetInt("GamesPlayed") + 1);
 		if (PlayerPrefs.GetInt("GamesPlayed") % 4 == 0)
 		{
 			if (Advertisement.isReady()){
 				Advertisement.Show();
+				GA.API.Design.NewEvent("Advertisement.Shown");
 			}
+		}
+		if (PlayerPrefs.GetInt("GamesPlayed") % 9 == 0)
+		{
+			IOSRateUsPopUp rate = IOSRateUsPopUp.Create();
+			GA.API.Design.NewEvent("RateBox.Shown");
 		}
 		gameOverScreen.SetActive(true);
 
 		PlayerPrefs.SetInt("RoundScore", levelScore);
 		PlayerPrefs.SetInt("TotalScore", PlayerPrefs.GetInt("TotalScore") + levelScore);
-		PlayerPrefs.SetInt("TotalCoinsCollected", PlayerPrefs.GetInt("TotalCoinsCollected") + PlayerPrefs.GetInt("CoinsCollected"));
+		PlayerPrefs.SetInt("TotalCoinsCollected", PlayerPrefs.GetInt("TotalCoinsCollected") + (coins * scoreMultiplier));
 		PlayerPrefs.SetInt("TotalAsteroidsDestroyed", PlayerPrefs.GetInt("TotalAsteroidsDestroyed") + PlayerPrefs.GetInt("RoundAsteroidsDestroyed"));
+
+		GA.API.Design.NewEvent("Game.Round.Score", levelScore);
+		GA.API.Design.NewEvent("Game.Round.Coins", PlayerPrefs.GetInt("CoinsCollected"));
+		GA.API.Design.NewEvent("Game.Round.Asteroids", PlayerPrefs.GetInt("RoundAsteroidsDestroyed"));
+		GA.API.Design.NewEvent("Game.Round.Distance", PlayerPrefs.GetInt("RoundDistance"));
 
 		Debug.Log ("New Round Score: " + levelScore);
 		Debug.Log ("New Total Score: " + PlayerPrefs.GetInt("TotalScore"));
@@ -114,31 +125,34 @@ public class LevelSettings : MonoBehaviour {
 		{
 			PlayerPrefs.SetInt("HighScore", levelScore);
 			Debug.Log ("New High Score Set: " + levelScore);
+			GA.API.Design.NewEvent("Game.High.Score", levelScore);
 		}
 		if (PlayerPrefs.GetInt("RoundDistance") > PlayerPrefs.GetInt("HighDistance"))
 		{
 			PlayerPrefs.SetInt("HighDistance", PlayerPrefs.GetInt("RoundDistance"));
 			Debug.Log ("New High Distance Set: " + PlayerPrefs.GetInt("HighDistance"));
+			GA.API.Design.NewEvent("Game.High.Distance", PlayerPrefs.GetInt("HighDistance"));
 		}
-
 	}
 	public void PauseGame()
 	{
 		paused = true;
 		pauseMenu.SetActive(true);
 		Time.timeScale = 0f;
+		GA.API.Design.NewEvent("Game.Event.Pause");
 	}
 	public void ResumeGame()
 	{
 		pauseMenu.SetActive(false);
 		paused = false;
 		Time.timeScale = newTimeScale;
-
+		GA.API.Design.NewEvent("Game.Event.Resume");
 	}
 	public void NewGame(){
 		Application.LoadLevel("FloatingGame");
 		gameOver = false;
 		Time.timeScale = 1f;
+		GA.API.Design.NewEvent("Game.Event.New");
 	}
 
 	public void DoubleScore()
