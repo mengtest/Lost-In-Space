@@ -17,6 +17,7 @@ public class LevelSettings : MonoBehaviour {
 	float newTimeScale;
 	public bool paused; 
 	float levelLoadTime;
+	int collectedCoins;
 
 	// Use this for initialization
 	void Start () {
@@ -103,7 +104,7 @@ public class LevelSettings : MonoBehaviour {
 
 		PlayerPrefs.SetInt("RoundScore", levelScore);
 		PlayerPrefs.SetInt("TotalScore", PlayerPrefs.GetInt("TotalScore") + levelScore);
-		PlayerPrefs.SetInt("TotalCoinsCollected", PlayerPrefs.GetInt("TotalCoinsCollected") + (coins * scoreMultiplier));
+		PlayerPrefs.SetInt("TotalCoinsCollected", PlayerPrefs.GetInt("TotalCoinsCollected") + collectedCoins);
 		PlayerPrefs.SetInt("TotalAsteroidsDestroyed", PlayerPrefs.GetInt("TotalAsteroidsDestroyed") + PlayerPrefs.GetInt("RoundAsteroidsDestroyed"));
 
 		GA.API.Design.NewEvent("Game.Round.Score", levelScore);
@@ -169,6 +170,7 @@ public class LevelSettings : MonoBehaviour {
 	void AddCoins(int coins)
 	{
 		PlayerPrefs.SetInt("CoinsCollected", PlayerPrefs.GetInt("CoinsCollected") + (coins * scoreMultiplier));
+		collectedCoins = coins * scoreMultiplier;
 	}
 
 	void MultiplierFlicker()
