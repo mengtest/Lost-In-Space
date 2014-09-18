@@ -134,6 +134,10 @@ public class LevelSettings : MonoBehaviour {
 			Debug.Log ("New High Distance Set: " + PlayerPrefs.GetInt("HighDistance"));
 			GA.API.Design.NewEvent("Game.High.Distance", PlayerPrefs.GetInt("HighDistance"));
 		}
+		GameObject gameCenter = GameObject.Find("GameCenterManager");
+		gameCenter.SendMessage("UpdateLeaderboard");
+		//GameCenterScript gameCenter = new GameCenterScript();
+		//gameCenter.UpdateLeaderboard();
 	}
 	public void PauseGame()
 	{

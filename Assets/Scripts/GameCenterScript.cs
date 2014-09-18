@@ -9,17 +9,13 @@ public class GameCenterScript : MonoBehaviour {
 			GameCenterManager.init();
 
 		//Registering Distance in One Run Achievements 
-		GameCenterManager.registerAchievement("distance500"); //5 Points
 		GameCenterManager.registerAchievement("distance1000"); //10 Points
-		GameCenterManager.registerAchievement("distance2000"); //10 Points
 		GameCenterManager.registerAchievement("distance5000"); //10 Points
 		GameCenterManager.registerAchievement("distance7500"); //10 Points
 		GameCenterManager.registerAchievement("distance9001"); //10 points 
 		GameCenterManager.registerAchievement("distance10000"); //25 Points 
 
 		//Registering Total Distance Achievements
-		GameCenterManager.registerAchievement("totaldistance1000"); //5 Points
-		GameCenterManager.registerAchievement("totaldistance5000"); //5 Points
 		GameCenterManager.registerAchievement("totaldistance10000"); //5 Points
 		GameCenterManager.registerAchievement("totaldistance50000"); //10 Points
 		GameCenterManager.registerAchievement("totaldistance100000"); //10 Points
@@ -35,27 +31,31 @@ public class GameCenterScript : MonoBehaviour {
 		GameCenterManager.registerAchievement("rounds250"); //25 Points 
 		GameCenterManager.registerAchievement("rounds500"); //25 Points
 		GameCenterManager.registerAchievement("rounds1000"); //100 Points
+	}
 
+	void Awake () {
+		DontDestroyOnLoad(gameObject);
 	}
 	
 	// Update is called once per frame
 	void Update () {
-		
+
 	}
 
 	public void UnlockAchievmenet() {
 
 	}
 
-	public void UpdateLeaderboard(string leaderboard, int score) {
+	public void UpdateLeaderboard() {
 	
-		string furthestDistance = "distance.furthest";
-		string totalDistance = "distance.total";
-		string totalCoins = "coins.total";
-		string bestScore = "score.best";
+		string furthestDistance = "distance.best";
+		//string totalDistance = "distance.total";
+		//string totalCoins = "coins.total";
+		//string bestScore = "score.best";
 		string totalScore = "score.total";
 
-		GameCenterManager.reportScore(score, leaderboard);
+		GameCenterManager.reportScore(PlayerPrefs.GetInt("HighDistance"),furthestDistance);
+		GameCenterManager.reportScore(PlayerPrefs.GetInt("HighScore"), totalScore);
 
 	}
 }
