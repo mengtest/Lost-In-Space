@@ -11,11 +11,9 @@ public class StatsListScript : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-		text.text = ("Total Coins Collected:" + "\n" + PlayerPrefs.GetInt("TotalCoinsCollected")
+		text.text = ("Total Coins Collected:" + "\n" + PlayerPrefs.GetInt("CoinsCollected")
 		             + "\n \n" + "High Score:" + "\n" + PlayerPrefs.GetInt("HighScore")
 		             + "\n \n" + "Furthest Traveled:" + "\n" + PlayerPrefs.GetInt("HighDistance")
 		             + "\n \n" + "Asteroids Destroyed:" + "\n" + PlayerPrefs.GetInt("TotalAsteroidsDestroyed"));
-
-
 	}
 }
