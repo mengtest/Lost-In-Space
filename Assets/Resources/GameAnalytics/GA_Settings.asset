@@ -28,7 +28,7 @@ MonoBehaviour:
   GameKey: 1f3821103629e303dee587a42c0c0b14
   SecretKey: 38094ddcafeed76a66f0bee66374b0a5adc83774
   ApiKey: a8e90dd20b5bf99e772d1e1b3c03bbb5e04f24e3
-  Build: 0.4.5
+  Build: 1.0.1
   SignUpOpen: 0
   FirstName: 
   LastName: 
@@ -57,7 +57,7 @@ MonoBehaviour:
   Start_Sessions: 0
   TimePlayed: 300
   Sessions: 1
-  Trigger_AdsEnabled: 0
+  Trigger_AdsEnabled: 1
   Trigger_AdsEnabled_network: 1
   Trigger_SceneChange: 1
   Trigger_SceneChange_network: 1
@@ -71,7 +71,7 @@ MonoBehaviour:
   CB_foldout: 1
   CB_appID: 
   CB_appSig: 
-  CurrentInspectorState: 1
+  CurrentInspectorState: 3
   ClosedHints: 
   DisplayHints: 0
   DisplayHintsScrollState: {x: 0, y: 0}
