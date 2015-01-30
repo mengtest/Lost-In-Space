@@ -53,9 +53,11 @@ public class GameCenterScript : MonoBehaviour {
 		//string totalCoins = "coins.total";
 		//string bestScore = "score.best";
 		string totalScore = "score.total";
+        string totalAsteroids = "score.asteroids";
 
-		GameCenterManager.reportScore(PlayerPrefs.GetInt("HighDistance"),furthestDistance);
+		GameCenterManager.reportScore(PlayerPrefs.GetInt("HighDistance"), furthestDistance);
 		GameCenterManager.reportScore(PlayerPrefs.GetInt("HighScore"), totalScore);
+        GameCenterManager.reportScore(PlayerPrefs.GetInt("TotalAsteroidsDestroyed"), totalAsteroids);
 
 	}
 }
